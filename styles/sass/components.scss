@@ -21,23 +21,70 @@
   gap: 30px;
   background-color: $secondary-background-color;
   padding: 40px 30px 40px 30px;
-  .introduction__title {
-    font-weight: bold;
-    font-size: 24px;
-  }
   .introduction__btn {
     padding: 15px;
     align-self: center;
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
   }
   .introduction__btn--gradient {
     color: white;
     background-image: linear-gradient($primary-color, $secondary-color);
+    font-weight: bold;
+  }
+}
+
+.how-to {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .how-to__steps {
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    .how-to__bullet {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 10px;
+      background-color: $primary-color;
+      color: white;
+    }
+    .how-to__icon {
+      padding-right: 25px;
+      font-size: 20px;
+      padding-left: 10px;
+    }
+    .how-to__label {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .how-to__icon--active {
+    color: $primary-color;
+  }
+  .how-to__steps--active {
+    background-color: #f5edff;
+  }
+  .how-to__steps--inactive {
+    background-color: $secondary-background-color;
   }
 }
 
 .logo {
   display: flex;
   align-self: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
 }
