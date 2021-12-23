@@ -79,6 +79,39 @@
   }
 }
 
+.restaurants-list {
+  background-color: $secondary-background-color;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  align-self: center;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  .card__img {
+    object-fit: cover;
+    height: 200px;
+    width: 400px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    .card__content__title {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .card__content__location {
+      font-weight: lighter;
+    }
+  }
+}
+
 .logo {
   display: flex;
   align-self: center;
