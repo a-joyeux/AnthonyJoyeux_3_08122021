@@ -17,17 +17,17 @@
   </head>
 
   <header>
-    <div class="logo">
+    <div class="header__logo">
       <img src="images/logo/ohmyfood@2x.svg" alt="" />
     </div>
   </header>
   <body>
     <section>
       <div class="localisation">
-        <span class="localisation__icon">
+        <span class="icon">
           <i class="fas fa-map-marker-alt"></i>
         </span>
-        <span class="localisation__title--bold">Paris, Belleville</span>
+        <span class="localisation__title">Paris, Belleville</span>
       </div>
       <div class="introduction">
         <span class="title">Réservez le menu qui vous convient</span>
@@ -42,43 +42,102 @@
     <section>
       <div class="how-to">
         <span class="title">Fonctionnement</span>
-        <div class="how-to__steps how-to__steps--inactive">
-          <span class="how-to__bullet">1</span>
-          <span class="how-to__icon">
+        <div class="steps">
+          <span class="steps__bullet">1</span>
+          <span class="steps__icon">
             <i class="fas fa-mobile-alt"></i>
           </span>
-          <span class="how-to__label">Choisissez un restaurant</span>
+          <span class="steps__label">Choisissez un restaurant</span>
         </div>
-        <div class="how-to__steps how-to__steps--inactive">
-          <span class="how-to__bullet">2</span>
-          <span class="how-to__icon">
+        <div class="steps">
+          <span class="steps__bullet">2</span>
+          <span class="steps__icon">
             <i class="fas fa-list"></i>
           </span>
-          <span class="how-to__label">Composez votre menu</span>
+          <span class="steps__label">Composez votre menu</span>
         </div>
-        <div class="how-to__steps how-to__steps--active">
-          <span class="how-to__bullet">3</span>
-          <span class="how-to__icon how-to__icon--active">
+        <div class="steps steps--active">
+          <span class="steps__bullet">3</span>
+          <span class="steps__icon steps__icon--active">
             <i class="fas fa-store"></i>
           </span>
-          <span class="how-to__label">Dégustez au restaurant</span>
+          <span class="steps__label">Dégustez au restaurant</span>
         </div>
       </div>
     </section>
     <section class="restaurants-list">
       <span class="title">Restaurants</span>
       <div class="card">
-        <img class="card__img" src="images/restaurants/palette.jpg" />
-        <div class="card__content">
-          <span class="card__content__title">La palette du goût</span>
-          <span class="card__content__location">Ménilmontant</span>
+        <div class="card__thumbnail">
+          <img class="thumbnail__img" src="images/restaurants/palette.jpg" />
+          <span class="thumbnail__tag">Nouveau</span>
         </div>
-        <div class="card__fav">
-          <span class="card__fav__icon">
-            <i class="fas fa-heart"></i>
-          </span>
+        <div class="card__content">
+          <div class="description">
+            <span class="title">La palette du goût</span>
+            <span class="location">Ménilmontant</span>
+          </div>
+          <div class="fav">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__thumbnail">
+          <img class="thumbnail__img" src="images/restaurants/note.jpg" />
+          <span class="thumbnail__tag">Nouveau</span>
+        </div>
+        <div class="card__content">
+          <div class="description">
+            <span class="title">La note enchantée</span>
+            <span class="location">Charonne</span>
+          </div>
+          <div class="fav">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__thumbnail">
+          <img class="thumbnail__img" src="images/restaurants/francaise.jpg" />
+          <span class="thumbnail__tag thumbnail__tag--hidden">Nouveau</span>
+        </div>
+        <div class="card__content">
+          <div class="description">
+            <span class="title">À la française</span>
+            <span class="location">Cité rouge</span>
+          </div>
+          <div class="fav">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__thumbnail">
+          <img class="thumbnail__img" src="images/restaurants/delice.jpg" />
+          <span class="thumbnail__tag thumbnail__tag--hidden">Nouveau</span>
+        </div>
+        <div class="card__content">
+          <div class="description">
+            <span class="title">Le délice des sens</span>
+            <span class="location">Folie-Méricourt</span>
+          </div>
+          <div class="fav">
+            <span class="icon">
+              <i class="far fa-heart"></i>
+            </span>
+          </div>
         </div>
       </div>
     </section>
   </body>
+  <footer>
+    <span class="footer__logo">ohmyfood</span>
+  </footer>
 </html>

@@ -19,6 +19,10 @@ header {
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+footer {
+  background-color: #353535;
+}
+
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,11 +38,11 @@ header {
   background-color: #eaeaea;
 }
 
-.localisation .localisation__icon {
+.localisation .icon {
   margin-right: 10px;
 }
 
-.localisation .localisation__title--bold {
+.localisation__title {
   font-weight: bold;
 }
 
@@ -84,7 +88,7 @@ header {
   gap: 30px;
 }
 
-.how-to .how-to__steps {
+.steps {
   padding: 25px;
   border-radius: 25px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -99,9 +103,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  background-color: #f6f6f6;
 }
 
-.how-to .how-to__steps .how-to__bullet {
+.steps--active {
+  background-color: #f5edff;
+}
+
+.steps .steps__bullet {
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,27 +129,19 @@ header {
   color: white;
 }
 
-.how-to .how-to__steps .how-to__icon {
+.steps .steps__icon {
   padding-right: 25px;
   font-size: 20px;
   padding-left: 10px;
 }
 
-.how-to .how-to__steps .how-to__label {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.how-to .how-to__icon--active {
+.steps .steps__icon--active {
   color: #9356dc;
 }
 
-.how-to .how-to__steps--active {
-  background-color: #f5edff;
-}
-
-.how-to .how-to__steps--inactive {
-  background-color: #f6f6f6;
+.steps .steps__label {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .restaurants-list {
@@ -164,17 +165,53 @@ header {
   background-color: white;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 320px;
 }
 
-.card .card__img {
+.card .card__thumbnail {
+  height: 200px;
+}
+
+.card .card__thumbnail .thumbnail__img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 200px;
-  width: 400px;
+  width: 320px;
   border-radius: 20px 20px 0px 0px;
 }
 
+.card .card__thumbnail .thumbnail__tag {
+  position: relative;
+  top: -180px;
+  left: 230px;
+  padding: 8px;
+  background-color: #99e2d0;
+  color: #00835e;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.card .card__thumbnail .thumbnail__tag--hidden {
+  display: none;
+}
+
 .card .card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .card__content .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,18 +220,33 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 10px;
+  gap: 5px;
 }
 
-.card .card__content .card__content__title {
+.card .card__content .description .title {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
 }
 
-.card .card__content .card__content__location {
+.card .card__content .description .location {
   font-weight: lighter;
+  font-size: 12px;
 }
 
-.logo {
+.card .card__content .fav {
+  margin-right: 30px;
+  font-size: 25px;
+}
+
+.card .card__content .fav .far:hover:before {
+  font-weight: 900;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(72%, #ff79da));
+  background: linear-gradient(180deg, #9356dc 0%, #ff79da 72%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

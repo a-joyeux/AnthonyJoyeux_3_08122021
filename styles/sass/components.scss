@@ -6,10 +6,10 @@
   padding: 20px;
   justify-content: center;
   background-color: $primary-background-color;
-  .localisation__icon {
+  .icon {
     margin-right: 10px;
   }
-  .localisation__title--bold {
+  &__title {
     font-weight: bold;
   }
 }
@@ -39,43 +39,41 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  .how-to__steps {
-    padding: 25px;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    .how-to__bullet {
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      height: 30px;
-      position: absolute;
-      left: 10px;
-      background-color: $primary-color;
-      color: white;
-    }
-    .how-to__icon {
-      padding-right: 25px;
-      font-size: 20px;
-      padding-left: 10px;
-    }
-    .how-to__label {
-      font-size: 20px;
-      font-weight: bold;
-    }
-  }
-  .how-to__icon--active {
-    color: $primary-color;
-  }
-  .how-to__steps--active {
+}
+.steps {
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: $secondary-background-color;
+  &--active {
     background-color: #f5edff;
   }
-  .how-to__steps--inactive {
-    background-color: $secondary-background-color;
+  .steps__bullet {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    background-color: $primary-color;
+    color: white;
+  }
+  .steps__icon {
+    padding-right: 25px;
+    font-size: 20px;
+    padding-left: 10px;
+    &--active {
+      color: $primary-color;
+    }
+  }
+  .steps__label {
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 
@@ -92,27 +90,66 @@
   border-radius: 20px;
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  .card__img {
-    object-fit: cover;
+  width: 320px;
+  .card__thumbnail {
     height: 200px;
-    width: 400px;
-    border-radius: 20px 20px 0px 0px;
+    .thumbnail__img {
+      object-fit: cover;
+      height: 200px;
+      width: 320px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    .thumbnail__tag {
+      position: relative;
+      top: -180px;
+      left: 230px;
+      padding: 8px;
+      background-color: $tag-background-color;
+      color: $tag-text-color;
+      border-radius: 2px;
+      font-weight: bold;
+      &--hidden {
+        display: none;
+      }
+    }
   }
   .card__content {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    .card__content__title {
-      font-weight: bold;
-      font-size: 22px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .description {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      gap: 5px;
+      .title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .location {
+        font-weight: lighter;
+        font-size: 12px;
+      }
     }
-    .card__content__location {
-      font-weight: lighter;
+    .fav {
+      margin-right: 30px;
+      font-size: 25px;
+      .far:hover:before {
+        font-weight: 900;
+        background: linear-gradient(
+          180deg,
+          rgba(147, 86, 220, 1) 0%,
+          rgba(255, 121, 218, 1) 72%
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
     }
   }
 }
 
-.logo {
+.header__logo {
   display: flex;
   align-self: center;
 }
