@@ -14,13 +14,142 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 70px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__icon {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+
 footer {
   background-color: #353535;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding: 20px 20px 0px 20px;
+}
+
+footer .footer__logo {
+  font-family: "Shrikhand", cursive !important;
+  font-size: 20px;
+}
+
+footer .footer__menu {
+  font-size: 16px;
+}
+
+footer .footer__menu ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+footer .footer__menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.btn--gradient {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(#9356dc, #ff79da);
+  font-weight: bold;
+}
+
+.link-no-style--white {
+  text-decoration: none;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-webkit-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-moz-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:any-link {
+  color: white;
+}
+
+.link-no-style--black {
+  text-decoration: none;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-webkit-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-moz-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:any-link {
+  color: black;
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    margin-top: 10%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 10%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0%;
+    opacity: 1;
+  }
 }
 
 .localisation {
@@ -58,22 +187,6 @@ footer {
   gap: 30px;
   background-color: #f6f6f6;
   padding: 40px 30px 40px 30px;
-}
-
-.introduction .introduction__btn {
-  padding: 15px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: none;
-  border-radius: 25px;
-}
-
-.introduction .introduction__btn--gradient {
-  color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background-image: linear-gradient(#9356dc, #ff79da);
-  font-weight: bold;
 }
 
 .how-to {
@@ -166,6 +279,16 @@ footer {
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 320px;
+  position: relative;
+}
+
+.card a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .card .card__thumbnail {
@@ -209,6 +332,7 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 10px;
 }
 
 .card .card__content .description {
@@ -233,28 +357,132 @@ footer {
   font-size: 12px;
 }
 
-.card .card__content .fav {
-  margin-right: 30px;
+.fav {
   font-size: 25px;
 }
 
-.card .card__content .fav .far:hover:before {
+.fav .far:hover:before {
   font-weight: 900;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), color-stop(72%, #ff79da));
   background: linear-gradient(180deg, #9356dc 0%, #ff79da 72%);
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
-}
-
-.header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
 }
 
 .title {
   font-weight: bold;
   font-size: 24px;
+}
+
+/* Menu styles */
+.menu__img {
+  width: 100%;
+}
+
+.menu__container {
+  position: relative;
+  margin-top: -50px;
+  border-radius: 40px 40px 0px 0px;
+  background-color: #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 30px 30px 30px;
+}
+
+.menu__container .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__container .head .title {
+  font-family: "Shrikhand", cursive !important;
+}
+
+.menu__container .meal-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.menu__container .meal-list .meal-step {
+  margin-top: 30px;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.menu__container .meal-list .meal-step:after {
+  display: block;
+  content: "";
+  width: 50%;
+  margin-top: 5px;
+  height: 3px;
+  background: #99e2d0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.menu__container .meal-list .meal-card {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slide-up;
+          animation-name: slide-up;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menu__container .meal-list .meal-card .meal-card__name {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-weight: bold;
+}
+
+.menu__container .meal-list .meal-card .meal-card__recipe {
+  font-size: 14px;
+}
+
+.menu__container .meal-list .meal-card .meal-card__price {
+  font-weight: bold;
 }

@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 /* Font Families */
-$primary-font: "Shrikhand";
+$primary-font: "Shrikhand", cursive;
 $secondary-font: "Roboto";
 
 /* Main colors */
@@ -28,13 +28,72 @@ body {
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 70px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  .header__logo {
+    display: flex;
+  }
+  .header__icon {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+  }
 }
 
 footer {
   background-color: $footer-color;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 20px 0px 20px;
   .footer__logo {
-    font-family: $secondary-font;
+    font-family: $primary-font !important;
+    font-size: 20px;
+  }
+  .footer__menu {
+    font-size: 16px;
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 15px;
+  align-self: center;
+  border: none;
+  border-radius: 25px;
+  &--gradient {
+    color: white;
+    background-image: linear-gradient($primary-color, $secondary-color);
+    font-weight: bold;
+  }
+}
+
+.link-no-style {
+  &--white {
+    text-decoration: none;
+    &:visited,
+    &:any-link {
+      color: white;
+    }
+  }
+  &--black {
+    text-decoration: none;
+    &:visited,
+    &:any-link {
+      color: black;
+    }
   }
 }
