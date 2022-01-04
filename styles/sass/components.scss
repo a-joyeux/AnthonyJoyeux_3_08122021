@@ -201,26 +201,49 @@
         }
       }
       .meal-card {
-        animation-duration: 3s;
+        animation-duration: 2s;
         animation-name: slide-up;
         background-color: white;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 10px;
         border-radius: 10px;
         gap: 5px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 1;
+        flex: 1;
+        &:hover + .select-bar {
+          width: 70px;
+          transition: width 1s;
+        }
         .meal-card__name {
           flex-basis: 100%;
           font-weight: bold;
+          padding: 10px 10px 0px 10px;
         }
         .meal-card__recipe {
           font-size: 14px;
+          padding: 0px 0px 0px 10px;
         }
         .meal-card__price {
           font-weight: bold;
+          padding: 0px 10px 10px 0px;
+        }
+      }
+      .meal-container {
+        display: flex;
+        .select-bar {
+          background-color: $tertiary-color;
+          display: block;
+          border-radius: 0px 15px 15px 0px;
+          position: relative;
+          right: 5px;
+          width: 0px;
+          transition: width 1s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }

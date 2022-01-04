@@ -74,10 +74,14 @@ footer {
   align-self: center;
   border: none;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
   &--gradient {
     color: white;
     background-image: linear-gradient($primary-color, $secondary-color);
     font-weight: bold;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+    }
   }
 }
 

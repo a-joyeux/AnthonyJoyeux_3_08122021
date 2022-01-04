@@ -1,6 +1,138 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Font Families */
+/* Main colors */
+body {
+  font-family: "Roboto";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__icon {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding: 20px 20px 0px 20px;
+}
+
+footer .footer__logo {
+  font-family: "Shrikhand", cursive !important;
+  font-size: 20px;
+}
+
+footer .footer__menu {
+  font-size: 16px;
+}
+
+footer .footer__menu ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+footer .footer__menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.btn--gradient {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(#9356dc, #ff79da);
+  font-weight: bold;
+}
+
+.link-no-style--white {
+  text-decoration: none;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-webkit-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-moz-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:any-link {
+  color: white;
+}
+
+.link-no-style--black {
+  text-decoration: none;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-webkit-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-moz-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:any-link {
+  color: black;
+}
+
 @-webkit-keyframes slide-up {
   from {
-    margin-top: 10%;
+    margin-top: 2%;
     opacity: 0;
   }
   to {
@@ -8,9 +140,10 @@
     opacity: 1;
   }
 }
+
 @keyframes slide-up {
   from {
-    margin-top: 10%;
+    margin-top: 2%;
     opacity: 0;
   }
   to {

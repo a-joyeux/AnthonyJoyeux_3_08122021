@@ -3,6 +3,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /* Font Families */
 /* Main colors */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  font-family: "Roboto";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__icon {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding: 20px 20px 0px 20px;
+}
+
+footer .footer__logo {
+  font-family: "Shrikhand", cursive !important;
+  font-size: 20px;
+}
+
+footer .footer__menu {
+  font-size: 16px;
+}
+
+footer .footer__menu ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+footer .footer__menu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+.btn {
+  padding: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: none;
+  border-radius: 25px;
+}
+
+.btn--gradient {
+  color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: linear-gradient(#9356dc, #ff79da);
+  font-weight: bold;
+}
+
+.link-no-style--white {
+  text-decoration: none;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-webkit-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:-moz-any-link {
+  color: white;
+}
+
+.link-no-style--white:visited, .link-no-style--white:any-link {
+  color: white;
+}
+
+.link-no-style--black {
+  text-decoration: none;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-webkit-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:-moz-any-link {
+  color: black;
+}
+
+.link-no-style--black:visited, .link-no-style--black:any-link {
+  color: black;
+}
+
+/* Imports */
+/* Font Families */
+/* Main colors */
 body {
   font-family: "Roboto";
 }
@@ -132,7 +264,7 @@ footer .footer__menu ul li {
 
 @-webkit-keyframes slide-up {
   from {
-    margin-top: 10%;
+    margin-top: 2%;
     opacity: 0;
   }
   to {
@@ -143,7 +275,7 @@ footer .footer__menu ul li {
 
 @keyframes slide-up {
   from {
-    margin-top: 10%;
+    margin-top: 2%;
     opacity: 0;
   }
   to {
@@ -449,8 +581,8 @@ footer .footer__menu ul li {
 }
 
 .menu__container .meal-list .meal-card {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-name: slide-up;
           animation-name: slide-up;
   background-color: white;
@@ -466,23 +598,61 @@ footer .footer__menu ul li {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
   border-radius: 10px;
   gap: 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.menu__container .meal-list .meal-card:hover + .select-bar {
+  width: 70px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
 }
 
 .menu__container .meal-list .meal-card .meal-card__name {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   font-weight: bold;
+  padding: 10px 10px 0px 10px;
 }
 
 .menu__container .meal-list .meal-card .meal-card__recipe {
   font-size: 14px;
+  padding: 0px 0px 0px 10px;
 }
 
 .menu__container .meal-list .meal-card .meal-card__price {
   font-weight: bold;
+  padding: 0px 10px 10px 0px;
+}
+
+.menu__container .meal-list .meal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__container .meal-list .meal-container .select-bar {
+  background-color: #99e2d0;
+  display: block;
+  border-radius: 0px 15px 15px 0px;
+  position: relative;
+  right: 5px;
+  width: 0px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
