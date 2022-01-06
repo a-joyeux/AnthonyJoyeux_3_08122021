@@ -137,6 +137,7 @@
 
 .fav {
   font-size: 25px;
+  z-index: 1;
   .far:hover:before {
     font-weight: 900;
     background: linear-gradient(
@@ -213,10 +214,6 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         z-index: 1;
         flex: 1;
-        &:hover + .select-bar {
-          width: 70px;
-          transition: width 1s;
-        }
         .meal-card__name {
           flex-basis: 100%;
           font-weight: bold;
@@ -233,6 +230,14 @@
       }
       .meal-container {
         display: flex;
+        &:hover .select-bar {
+          width: 70px;
+          transition: width 1s;
+        }
+        &:hover .select-bar .fa-check-circle {
+          animation-duration: 2s;
+          animation-name: spin;
+        }
         .select-bar {
           background-color: $tertiary-color;
           display: block;
