@@ -137,6 +137,11 @@ footer .footer__menu ul li {
   color: black;
 }
 
+hr {
+  width: 100%;
+  border: none;
+}
+
 .loader {
   position: fixed;
   display: -webkit-box;
@@ -166,8 +171,8 @@ footer .footer__menu ul li {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;

@@ -139,6 +139,11 @@ footer .footer__menu ul li {
   color: black;
 }
 
+hr {
+  width: 100%;
+  border: none;
+}
+
 .loader {
   position: fixed;
   display: -webkit-box;
@@ -168,8 +173,8 @@ footer .footer__menu ul li {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;
@@ -392,6 +397,11 @@ footer .footer__menu ul li {
   color: black;
 }
 
+hr {
+  width: 100%;
+  border: none;
+}
+
 .loader {
   position: fixed;
   display: -webkit-box;
@@ -421,8 +431,8 @@ footer .footer__menu ul li {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;
@@ -926,6 +936,13 @@ footer .footer__menu ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-width: 200px;
+}
+
+.menu__container .meal-list .meal-card span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__container .meal-list .meal-card .meal-card__name {
@@ -937,12 +954,13 @@ footer .footer__menu ul li {
 
 .menu__container .meal-list .meal-card .meal-card__recipe {
   font-size: 14px;
+  display: block;
   padding: 0px 0px 0px 10px;
 }
 
 .menu__container .meal-list .meal-card .meal-card__price {
   font-weight: bold;
-  padding: 0px 10px 10px 0px;
+  padding: 0px 10px 10px 10px;
 }
 
 .menu__container .meal-list .meal-container {
@@ -952,7 +970,7 @@ footer .footer__menu ul li {
 }
 
 .menu__container .meal-list .meal-container:hover .select-bar {
-  width: 70px;
+  width: 50px;
   -webkit-transition: width 1s;
   transition: width 1s;
 }

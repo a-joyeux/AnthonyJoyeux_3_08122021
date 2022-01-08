@@ -216,6 +216,12 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         z-index: 1;
         flex: 1;
+        min-width: 200px;
+        span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .meal-card__name {
           flex-basis: 100%;
           font-weight: bold;
@@ -223,17 +229,18 @@
         }
         .meal-card__recipe {
           font-size: 14px;
+          display: block;
           padding: 0px 0px 0px 10px;
         }
         .meal-card__price {
           font-weight: bold;
-          padding: 0px 10px 10px 0px;
+          padding: 0px 10px 10px 10px;
         }
       }
       .meal-container {
         display: flex;
         &:hover .select-bar {
-          width: 70px;
+          width: 50px;
           transition: width 1s;
         }
         &:hover .select-bar .fa-check-circle {

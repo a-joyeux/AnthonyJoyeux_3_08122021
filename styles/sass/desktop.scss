@@ -1,0 +1,30 @@
+@media screen and (min-width: 992px) {
+  .how-to {
+    flex-direction: row;
+    align-items: center;
+    .steps {
+      .steps__bullet {
+        position: relative;
+        left: -40px;
+        width: fit-content;
+        padding: 0px 10px 0px 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    .title {
+      flex-basis: 100%;
+    }
+  }
+
+  .menu__container {
+    padding: 30px 60px 30px 60px;
+  }
+}

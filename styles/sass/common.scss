@@ -102,6 +102,11 @@ footer {
   }
 }
 
+hr {
+  width: 100%;
+  border: none;
+}
+
 .loader {
   position: fixed;
   display: flex;
@@ -119,7 +124,7 @@ footer {
   font-size: 30px;
   animation-name: overlay-container;
   animation-duration: 0s;
-  animation-delay: 3s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
   background-color: white;
   .loader-card {

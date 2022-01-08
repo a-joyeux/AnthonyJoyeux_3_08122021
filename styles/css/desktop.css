@@ -1,0 +1,41 @@
+@media screen and (min-width: 992px) {
+  .how-to {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .how-to .steps .steps__bullet {
+    position: relative;
+    left: -40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .restaurants-list .title {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .menu__container {
+    padding: 30px 60px 30px 60px;
+  }
+}
