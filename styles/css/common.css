@@ -171,8 +171,8 @@ hr {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;
