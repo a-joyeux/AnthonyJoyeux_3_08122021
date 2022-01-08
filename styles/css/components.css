@@ -600,6 +600,32 @@ footer .footer__menu ul li {
   }
 }
 
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes check {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -955,10 +981,9 @@ footer .footer__menu ul li {
 }
 
 .menu__container .meal-list .meal-container:hover .select-bar .fa-check-circle {
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-name: spin;
-          animation-name: spin;
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu__container .meal-list .meal-container .select-bar {
@@ -979,4 +1004,11 @@ footer .footer__menu ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.menu__container .meal-list .meal-container .select-bar .fa-check-circle {
+  color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
 }

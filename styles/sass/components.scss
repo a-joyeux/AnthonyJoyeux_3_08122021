@@ -235,8 +235,8 @@
           transition: width 1s;
         }
         &:hover .select-bar .fa-check-circle {
-          animation-duration: 2s;
-          animation-name: spin;
+          opacity: 1;
+          transform: rotate(360deg);
         }
         .select-bar {
           background-color: $tertiary-color;
@@ -249,6 +249,11 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          .fa-check-circle {
+            color: white;
+            transition: all 1s;
+            opacity: 0;
+          }
         }
       }
     }
