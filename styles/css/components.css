@@ -971,8 +971,9 @@ hr {
 
 .menu__container .meal-list .meal-container:hover .select-bar {
   width: 50px;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .menu__container .meal-list .meal-container:hover .select-bar .fa-check-circle {
@@ -988,10 +989,11 @@ hr {
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
   position: relative;
-  right: 5px;
-  width: 0px;
-  -webkit-transition: width 1s;
-  transition: width 1s;
+  right: 10px;
+  width: 10px;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
