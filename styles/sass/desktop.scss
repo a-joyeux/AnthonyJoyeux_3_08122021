@@ -2,6 +2,7 @@
   .how-to {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     .steps {
       .steps__bullet {
         position: relative;
@@ -18,7 +19,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     .title {
       flex-basis: 100%;
     }

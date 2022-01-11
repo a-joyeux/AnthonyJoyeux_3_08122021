@@ -173,8 +173,8 @@ hr {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;
@@ -431,8 +431,8 @@ hr {
           animation-name: overlay-container;
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: white;
@@ -982,17 +982,16 @@ hr {
 }
 
 .menu__container .meal-list .meal-container .select-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #99e2d0;
-  display: block;
   border-radius: 0px 15px 15px 0px;
   position: relative;
   right: 5px;
   width: 0px;
   -webkit-transition: width 1s;
   transition: width 1s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
