@@ -1000,6 +1000,7 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 5px;
 }
 
 .menu__container .meal-list .meal-container .select-bar .fa-check-circle {

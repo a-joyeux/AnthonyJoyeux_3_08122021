@@ -12,6 +12,15 @@
       }
     }
   }
+  .meal-container {
+    display: flex;
+    &:hover .select-bar {
+      width: 150px;
+    }
+    .select-bar {
+      width: 10px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {

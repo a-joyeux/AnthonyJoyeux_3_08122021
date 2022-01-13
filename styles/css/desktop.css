@@ -19,6 +19,17 @@
     width: fit-content;
     padding: 0px 10px 0px 10px;
   }
+  .meal-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .meal-container:hover .select-bar {
+    width: 150px;
+  }
+  .meal-container .select-bar {
+    width: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
