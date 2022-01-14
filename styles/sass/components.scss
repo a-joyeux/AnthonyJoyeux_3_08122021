@@ -38,8 +38,12 @@
   display: flex;
   flex-direction: row;
   background-color: $secondary-background-color;
-  &--active {
+  &:hover {
     background-color: #f5edff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+    .steps__icon {
+      color: $primary-color;
+    }
   }
   .steps__bullet {
     border-radius: 50%;
@@ -57,9 +61,6 @@
     padding-right: 25px;
     font-size: 20px;
     padding-left: 10px;
-    &--active {
-      color: $primary-color;
-    }
   }
   .steps__label {
     font-size: 20px;
