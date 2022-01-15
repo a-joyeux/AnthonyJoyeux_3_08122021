@@ -208,8 +208,8 @@
         animation-duration: 2s;
         animation-name: slide-up;
         background-color: white;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+
         justify-content: space-between;
         flex-wrap: wrap;
         border-radius: 10px;
@@ -224,17 +224,21 @@
           text-overflow: ellipsis;
         }
         .meal-card__name {
-          flex-basis: 100%;
+          grid-column-start: 1;
+          grid-column-end: 3;
           font-weight: bold;
           padding: 10px 10px 0px 10px;
         }
         .meal-card__recipe {
           font-size: 14px;
-          display: block;
+          grid-column-start: 1;
+          grid-column-end: 2;
           padding: 0px 0px 0px 10px;
         }
         .meal-card__price {
           font-weight: bold;
+          grid-column-start: 3;
+          grid-column-end: 3;
           padding: 0px 10px 10px 10px;
         }
       }
